@@ -1,0 +1,45 @@
+@use '../variables/variables' as v;
+
+.concept {
+    padding: 80px 40px;
+    background-color: v.$color-sub;
+    text-align: center;
+
+    &__title {
+        font-size: 1.8rem;
+        margin-bottom: 48px;
+        color: v.$color-text;
+        letter-spacing: 0.1em;
+    }
+
+    &__list {
+        display: flex;
+        gap: 32px;
+        justify-content: center;
+    }
+
+    &__item {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 40px 32px;
+    }
+
+    &__icon {
+        font-size: 2.5rem;
+        color: v.$color-primary;
+        margin-bottom: 16px;
+    }
+
+    &__name {
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-bottom: 12px;
+        color: v.$color-text;
+    }
+
+    &__text {
+        font-size: 0.9rem;
+        color: v.$color-gray;
+        line-height: 1.8;
+    }
+}

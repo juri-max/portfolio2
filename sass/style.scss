@@ -1,0 +1,132 @@
+@use 'variables/variables' as v;
+@use 'base/base';
+@use 'components/button';
+@use 'components/card';
+@use 'layout/header';
+@use 'layout/hero';
+@use 'layout/concept';
+@use 'layout/menu';
+@use 'layout/access';
+@use 'layout/footer';
+
+// ================================
+// レスポンシブ
+// ================================
+@media (max-width: 1110px) {
+
+  // Header
+    .header {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+    }
+
+  // Hero
+    .hero {
+        padding: 0 24px;
+        height: 500px;
+
+        &__inner {
+            padding: 24px;
+        }
+
+        &__title {
+            font-size: 1.5rem;
+        }
+    }
+
+  // Concept
+    .concept {
+        padding: 60px 24px;
+
+        &__list {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__item {
+            width: 100%;
+            max-width: 400px;
+        }
+    }
+
+  // Menu
+    .menu {
+        padding: 60px 24px;
+
+        &__list {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+  // Access
+    .access {
+        padding: 60px 24px;
+
+        &__inner {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__map {
+            width: 100%;
+        }
+
+        &__logo {
+            justify-content: center;
+        }
+
+        &__detail {
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        &__logo {
+            font-size: 35px;
+        }
+
+        &__list {
+            gap: 20px;
+        }
+
+    &__link {
+        font-size: 1rem;
+        letter-spacing: 0;
+    }
+    }
+
+    .hero {
+        padding: 0;
+        &__title {
+            font-size: 16px;
+        }
+    }
+}
+
+// ================================
+// レスポンシブ：550px以下
+// ================================
+@media (max-width: 550px) {
+
+  // Access
+    .access {
+        &__detail {
+            grid-template-columns: 1fr;  // ← 横並びから縦並びに変更
+            gap: 8px;
+        }
+
+        &__label {
+            margin-top: 16px;
+        }
+    }
+}
+
